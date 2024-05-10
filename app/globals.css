@@ -1,3 +1,7 @@
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+@import "primereact/resources/primereact.min.css";
+@import "primeicons/primeicons.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,13 +67,7 @@
   /* Keine absolute Positionierung erforderlich */
 }
 
-
-
-
-
-
 /* Hexagon aber vor dem Header*/
-
 
 .hex_header_container {
   position: relative;
@@ -79,7 +77,7 @@
 
 .hex_header {
   display: inline-block;
-  filter: url('#goo');
+  filter: url("#goo");
   color: darkBlue;
   width: 35%;
   position: absolute;
@@ -128,11 +126,6 @@
   top: 51%;
   left: 60%;
 }
-
-
-
-
-
 
 .pageContainer {
   position: relative;
