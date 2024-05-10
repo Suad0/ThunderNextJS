@@ -5,6 +5,7 @@ import React from "react";
 import { redirect } from "next/navigation";
 
 import Hexagon from "@/(components)/Hexagon";
+import PreHeader from "@/(components)/PreHeader";
 
 function page() {
   const hexagons = [
@@ -16,8 +17,14 @@ function page() {
 
   return (
     <>
-      <div>
-        <Hexagon hexagons={hexagons} route={"/questions_four"} />
+      <div className="pageContainer">
+        <div className="preHeaderWrapper">
+          <PreHeader />
+        </div>
+
+        <div>
+          <Hexagon hexagons={hexagons} route={"/questions_four"} />
+        </div>
       </div>
     </>
   );

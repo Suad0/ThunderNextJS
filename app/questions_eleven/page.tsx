@@ -18,10 +18,10 @@ function page() {
             alignItems: "center",
           }}
         >
-          <Smilys route={"questions_six"} />
+          <Smilys route={"questions_twelve"} />
           <br></br>
           <h2 style={{ color: "violet" }}>
-            When spending a relaxing evening at Home
+            I prffer having a clear 
           </h2>
         </div>
       </div>
