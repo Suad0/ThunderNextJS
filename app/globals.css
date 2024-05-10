@@ -2,32 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Oder die gewünschte Höhe */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hex {
+  filter: url("#goo");
+  color: darkBlue;
+  width: 120px; /* Breite und Höhe je nach Bedarf anpassen */
+  height: 120px;
+  margin: 0 10px; /* Abstand zwischen den Hexagons */
+  cursor: pointer;
+  position: relative;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hex::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  padding-top: 86.6%;
+  /* 100%*cos(30) */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.hex-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px;
+  background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pos0 {
+  /* Keine absolute Positionierung erforderlich */
+}
+
+.pos1 {
+  /* Keine absolute Positionierung erforderlich */
+}
+
+.pos2 {
+  /* Keine absolute Positionierung erforderlich */
+}
+
+.pos3 {
+  /* Keine absolute Positionierung erforderlich */
+}
+
+
+
+
+
+
+/* Hexagon aber vor dem Header*/
+
+
+.hex_header_container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.hex_header {
+  display: inline-block;
+  filter: url('#goo');
+  color: darkBlue;
+  width: 35%;
+  position: absolute;
+}
+
+.hex_header::before {
+  content: "";
+  display: block;
+  background: currentColor;
+  padding-top: 86.6%;
+  /* 100%*cos(30) */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hex_header_pos0 {
+  top: 0%;
+  left: 30%;
+}
+
+.hex_header_pospos1 {
+  top: 17%;
+  left: 0%;
+}
+
+.hex_header_pos2 {
+  top: 17%;
+  left: 60%;
+}
+
+.hex_header_pos3 {
+  top: 34%;
+  left: 30%;
+}
+
+.hex_header_pos4 {
+  top: 51%;
+  left: 0%;
+}
+
+.hex_header_pos5 {
+  top: 68%;
+  left: 30%;
+}
+
+.hex_header_pos6 {
+  top: 51%;
+  left: 60%;
 }

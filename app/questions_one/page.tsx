@@ -1,9 +1,12 @@
-import React from "react";
-import Hexagon from "@/(components)/Hexagon";
-import Image from "next/image";
-import PreHeader from "@/(components)/PreHeader";
+"use client";
 
-export default function Home() {
+import React from "react";
+
+import { redirect } from "next/navigation";
+
+import Hexagon from "@/(components)/Hexagon";
+
+function page() {
   const hexagons = [
     { text: "Work enthusiast" },
     { text: "Party person" },
@@ -14,8 +17,10 @@ export default function Home() {
   return (
     <>
       <div>
-        <h1>Hallo und willkommen</h1>
+        <Hexagon hexagons={hexagons} route={"/questions_two"} />
       </div>
     </>
   );
 }
+
+export default page;
