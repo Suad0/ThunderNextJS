@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-function page() {
+import { Dropdown } from "primereact/dropdown";
+
+function Page() {
   const [selectedDistrict, setSelectedDistrict] = useState<any>(null);
 
   const districts = [
@@ -10,7 +12,26 @@ function page() {
     { name: "Landstraße", code: 3 },
   ];
 
-  return <div>page</div>;
+  const onCityChange = (e: { value: any }) => {
+    setSelectedDistrict(e.value);
+  };
+
+  return (
+    <div className="card">
+      <div className="flex justify-center items-center h-screen">
+        <div className="w-64">
+          <Dropdown
+            value={selectedDistrict}
+            options={districts}
+            onChange={onCityChange}
+            optionLabel="name"
+            placeholder="Select a District"
+            className="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default page;
+export default Page;
