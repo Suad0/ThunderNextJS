@@ -140,7 +140,6 @@
 .hexagonWrapper {
 }
 
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -161,3 +160,16 @@
   margin-right: 0;
 }
 
+.button-normal .p-button-default {
+  /* Add styles for the default button */
+  background-color: #007bff; /* Blue color, change as needed */
+  color: #fff; /* White text color */
+  border: none; /* Remove default button border */
+  padding: 0.5rem 1rem; /* Add padding to the button */
+  border-radius: 0.25rem; /* Add border radius to make it look more rounded */
+}
+
+.button-normal .p-button-default:hover {
+  /* Add hover styles if needed */
+  background-color: #0056b3; /* Darker blue color on hover */
+}
