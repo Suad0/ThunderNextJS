@@ -17,20 +17,30 @@ function page() {
 
   return (
     <>
-      <div className="pageContainer">
-        <div className="preHeaderWrapper">
-          <PreHeader />
-        </div>
+      <div
+        style={{
+          backgroundImage: `url("/assets/images/background.svg")`,
+          width: "100vw",
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="pageContainer">
+          <div className="preHeaderWrapper">
+            <PreHeader />
+          </div>
 
-        <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <Hexagon hexagons={hexagons} route={"/questions_five"} />
-          </motion.div>
+          <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              <Hexagon hexagons={hexagons} route={"/questions_five"} />
+            </motion.div>
+          </div>
         </div>
       </div>
     </>

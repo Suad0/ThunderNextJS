@@ -74,121 +74,129 @@ function Page() {
 
   return (
     <div>
-      <div className="preHeaderWrapper">
-        <PreHeader />
-      </div>
-      <div className="flex justify-center items-center h-screen">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="card-container"
-        >
+      <div
+        style={{
+          backgroundImage: `url("/assets/images/background.svg")`,
+          width: "100vw",
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="preHeaderWrapper">
+          <PreHeader />
+        </div>
+        <div className="flex justify-center items-center h-screen">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="card"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+            className="card-container"
           >
-            <div className="mb-4">
-              <div>
-                <h2>What is your Budget for a room</h2>
-                <Dropdown
-                  value={selectedBudget}
-                  options={budgetForRoom}
-                  onChange={onBudgetChange}
-                  optionLabel="name"
-                  placeholder="Select your Budget"
-                  className="w-full"
-                />
-              </div>
-
-              <br></br>
-
-              <div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="card"
+            >
+              <div className="mb-4">
                 <div>
-                  <h2>Choose your favorite district </h2>
+                  <h2>What is your Budget for a room</h2>
                   <Dropdown
-                    value={selectedDistrict}
-                    options={districts}
-                    onChange={onCityChange}
+                    value={selectedBudget}
+                    options={budgetForRoom}
+                    onChange={onBudgetChange}
                     optionLabel="name"
-                    placeholder="Select a District"
+                    placeholder="Select your Budget"
                     className="w-full"
+                  />
+                </div>
+
+                <br></br>
+
+                <div>
+                  <div>
+                    <h2>Choose your favorite district </h2>
+                    <Dropdown
+                      value={selectedDistrict}
+                      options={districts}
+                      onChange={onCityChange}
+                      optionLabel="name"
+                      placeholder="Select a District"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+
+                <br></br>
+
+                <div>
+                  <h2>Which City are you from</h2>
+                  <Dropdown
+                    value={selectedCountry}
+                    options={countries}
+                    onChange={onCountryChange}
+                    optionLabel="name"
+                    filter
+                    showClear
+                    filterBy="name"
+                    placeholder="Select yor City"
+                    valueTemplate={selectedCountryTemplate}
+                    itemTemplate={countryOptionTemplate}
                   />
                 </div>
               </div>
 
-              <br></br>
-
-              <div>
-                <h2>Which City are you from</h2>
-                <Dropdown
-                  value={selectedCountry}
-                  options={countries}
-                  onChange={onCountryChange}
-                  optionLabel="name"
-                  filter
-                  showClear
-                  filterBy="name"
-                  placeholder="Select yor City"
-                  valueTemplate={selectedCountryTemplate}
-                  itemTemplate={countryOptionTemplate}
-                />
+              <div className="mb-4">
+                <div>
+                  <span className="p-float-label">
+                    <InputText
+                      id="FirstName"
+                      value={val1}
+                      onChange={(e) => setVal1(e.target.value)}
+                    />
+                    <label htmlFor="FirstName">First Name</label>
+                  </span>
+                </div>
               </div>
-            </div>
-
-            
-
-            <div className="mb-4">
-              <div>
-                <span className="p-float-label">
-                  <InputText
-                    id="FirstName"
-                    value={val1}
-                    onChange={(e) => setVal1(e.target.value)}
-                  />
-                  <label htmlFor="FirstName">First Name</label>
-                </span>
+              <div className="mb-4">
+                <div>
+                  <span className="p-float-label">
+                    <InputText
+                      id="LastName"
+                      value={val2}
+                      onChange={(e) => setVal2(e.target.value)}
+                    />
+                    <label htmlFor="LastName">Last Name</label>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="mb-4">
-              <div>
-                <span className="p-float-label">
-                  <InputText
-                    id="LastName"
-                    value={val2}
-                    onChange={(e) => setVal2(e.target.value)}
-                  />
-                  <label htmlFor="LastName">Last Name</label>
-                </span>
+              <div className="mb-4">
+                <div>
+                  <span className="p-float-label">
+                    <InputText
+                      id="email"
+                      value={val3}
+                      onChange={(e) => setVal3(e.target.value)}
+                    />
+                    <label htmlFor="email">Email</label>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="mb-4">
-              <div>
-                <span className="p-float-label">
-                  <InputText
-                    id="email"
-                    value={val3}
-                    onChange={(e) => setVal3(e.target.value)}
-                  />
-                  <label htmlFor="email">Email</label>
-                </span>
+              <div className="mb-4">
+                <div className="button-normal">
+                  <button
+                    className="p-button p-button-default"
+                    aria-label="Submit"
+                  >
+                    Submit
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="mb-4">
-              <div className="button-normal">
-                <button
-                  className="p-button p-button-default"
-                  aria-label="Submit"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

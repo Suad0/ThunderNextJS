@@ -6,23 +6,31 @@ import PreHeader from "@/(components)/PreHeader";
 function page() {
   return (
     <>
-      <div className="pageContainer">
-        <div className="preHeaderWrapper">
-          <PreHeader />
-        </div>
+      <div
+        style={{
+          backgroundImage: `url("/assets/images/background.svg")`,
+          width: "100vw",
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="pageContainer">
+          <div className="preHeaderWrapper">
+            <PreHeader />
+          </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Smilys route={"questions_twelve"} />
-          <br></br>
-          <h2 style={{ color: "violet" }}>
-            I prffer having a clear 
-          </h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Smilys route={"questions_twelve"} />
+            <br></br>
+            <h2 style={{ color: "violet" }}>I prffer having a clear</h2>
+          </div>
         </div>
       </div>
     </>
