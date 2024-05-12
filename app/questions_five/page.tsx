@@ -1,6 +1,9 @@
-import Smilys from "@/(components)/Smilys";
+"use client";
+
 import React from "react";
 
+
+import Smilys from "@/(components)/Smilys";
 import PreHeader from "@/(components)/PreHeader";
 
 function page() {

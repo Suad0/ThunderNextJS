@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
-import { Button } from "primereact/button";
+import { motion } from "framer-motion";
 
 import PreHeader from "@/(components)/PreHeader";
 
@@ -78,8 +78,19 @@ function Page() {
         <PreHeader />
       </div>
       <div className="flex justify-center items-center h-screen">
-        <div className="card-container">
-          <div className="card">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
+          className="card-container"
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="card"
+          >
             <div className="mb-4">
               <div>
                 <h2>What is your Budget for a room</h2>
@@ -128,9 +139,7 @@ function Page() {
               </div>
             </div>
 
-            <div className="mb-4">
-              <h2>You did it</h2>
-            </div>
+            
 
             <div className="mb-4">
               <div>
@@ -178,8 +187,8 @@ function Page() {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
