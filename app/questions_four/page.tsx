@@ -8,11 +8,11 @@ import PreHeader from "@/(components)/PreHeader";
 
 function page() {
   const hexagons = [
-    { text: "super orderly" },
-    { text: "a bit messy" },
-    { text: "clean, but relaxed" },
-    { text: "city lover" },
-    { text: "nature lover" },
+    { text: "super orderly", src: "/assets/images/hexagon2.svg" },
+    { text: "a bit messy", src: "/assets/images/hexagon3.svg" },
+    { text: "clean, but relaxed", src: "/assets/images/hexagon1.svg" },
+    { text: "city lover", src: "/assets/images/hexagon7.svg" },
+    { text: "nature lover", src: "/assets/images/hexagon6.svg" },
   ];
 
   return (

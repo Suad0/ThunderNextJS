@@ -9,10 +9,10 @@ import PreHeader from "@/(components)/PreHeader";
 
 function page() {
   const hexagons = [
-    { text: "eat everything" },
-    { text: "vegan" },
-    { text: "vegetarian" },
-    { text: "on a special diet" },
+    { text: "eat everything", src: "/assets/images/hexagon5.svg" },
+    { text: "vegan", src: "/assets/images/hexagon7.svg" },
+    { text: "vegetarian", src: "/assets/images/hexagon6.svg" },
+    { text: "on a special diet", src: "/assets/images/hexagon1.svg" },
   ];
 
   return (

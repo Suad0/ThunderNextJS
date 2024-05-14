@@ -254,7 +254,7 @@
 }
 
 .login-btn {
-  background-color: pink;
+  background-color: blueviolet;
   color: #333;
   padding: 8px 16px;
   border-radius: 4px;
@@ -263,7 +263,7 @@
 }
 
 .login-btn:hover {
-  background-color: #ddd;
+  background-color: pink;
 }
 
 .page-container {

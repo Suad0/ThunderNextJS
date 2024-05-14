@@ -32,7 +32,7 @@ function page() {
         >
           <Smilys route={"questions_eight"} />
           <br />
-          <h2 style={{ color: "purple" }}>
+          <h2 style={{ color: "purple", textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
             I appreciate when households chores
           </h2>
         </div>

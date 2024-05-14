@@ -42,7 +42,7 @@ function Smilys({ route }: SmilysProps) {
             }}
           />
 
-          <span>sehr gut</span>
+          <span>perfect</span>
         </div>
 
         <div
@@ -64,7 +64,7 @@ function Smilys({ route }: SmilysProps) {
               backgroundColor: feedback === 2 ? "red" : "lightgray",
             }}
           />
-          <span>gut</span>
+          <span>good</span>
         </div>
         <div
           onClick={() => handleClick(route, 3)}
@@ -127,7 +127,7 @@ function Smilys({ route }: SmilysProps) {
               backgroundColor: feedback === 5 ? "green" : "lightgray",
             }}
           />
-          <span>schlecht</span>
+          <span>bad</span>
         </div>
       </div>
     </div>

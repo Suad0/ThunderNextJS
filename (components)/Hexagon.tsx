@@ -2,11 +2,10 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import HexagonSVG from "./HexagonSVG";
 
 interface HexagonProps {
-  hexagons: { text: string }[];
+  hexagons: { text: string; src: string }[];
   route: string;
 }
 
@@ -35,7 +34,7 @@ function Hexagon({ hexagons, route }: HexagonProps) {
           onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
           <div className="hex-inner">
-            <HexagonSVG />
+            <HexagonSVG src={hex.src} />
             <span>{hex.text}</span>
           </div>
         </div>
@@ -43,17 +42,5 @@ function Hexagon({ hexagons, route }: HexagonProps) {
     </div>
   );
 }
-
-// <img src={hex.image} className="hex-image" alt={hex.text} />
-
-/* <Image
-src={hex.image}
-alt="Picture"
-width={50}
-height={5}
-className="hex-image"
-/>
-
-*/
 
 export default Hexagon;

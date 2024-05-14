@@ -1,17 +1,16 @@
 "use client";
 
 import React from "react";
-
 import Hexagon from "@/(components)/Hexagon";
 import PreHeader from "@/(components)/PreHeader";
 import { motion } from "framer-motion";
 
 function Page() {
   const hexagons = [
-    { text: "Work enthusiast" },
-    { text: "Party person" },
-    { text: "No obligation" },
-    { text: "Focused on studies" },
+    { text: "Work enthusiast", src: "/assets/images/hexagon1.svg" },
+    { text: "Party person", src: "/assets/images/hexagon2.svg" },
+    { text: "No obligation", src: "/assets/images/hexagon3.svg" },
+    { text: "Focused on studies", src: "/assets/images/hexagon4.svg" },
   ];
 
   return (

@@ -1,12 +1,15 @@
 import React from 'react'
 import Image from "next/image";
 
+interface HexagonSVGProps {
+  src: string;
+}
 
-function HexagonSVG() {
+function HexagonSVG({ src }: HexagonSVGProps) {
   return (
     <div>
         <Image
-        src="/assets/images/hexagon_svg.svg"
+        src={src}
         alt="Logo"
         width={200}
         height={200}
@@ -16,4 +19,4 @@ function HexagonSVG() {
   )
 }
 
-export default HexagonSVG
+export default HexagonSVG;

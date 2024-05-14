@@ -32,7 +32,7 @@ function page() {
         >
           <Smilys route={"questions_ten"} />
           <br />
-          <h2 style={{ color: "purple" }}>
+          <h2 style={{ color: "purple", textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}>
           I made most decisions based on logic
           </h2>
         </div>
