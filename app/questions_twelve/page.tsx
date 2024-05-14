@@ -13,24 +13,26 @@ function page() {
           height: "100vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          position: "relative",
+          textAlign: "center",
         }}
       >
-        <div className="pageContainer">
-          <div className="preHeaderWrapper">
-            <PreHeader />
-          </div>
+        <div className="preHeaderWrapper">
+          <PreHeader />
+        </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Smilys route={"questions_thirteen"} />
-            <br></br>
-            <h2 style={{ color: "violet" }}>I enjoy when plans with my</h2>
-          </div>
+        <div
+          className="pageContainer"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <Smilys route={"questions_thirteen"} />
+          <br />
+          <h2 style={{ color: "purple" }}>I enjoy when plans with my</h2>
         </div>
       </div>
     </>

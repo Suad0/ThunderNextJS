@@ -13,28 +13,33 @@ function page() {
           height: "100vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          position: "relative",
+          textAlign: "center",
         }}
       >
-        <div className="pageContainer">
-          <div className="preHeaderWrapper">
-            <PreHeader />
-          </div>
+        <div className="preHeaderWrapper">
+          <PreHeader />
+        </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Smilys route={"questions_twelve"} />
-            <br></br>
-            <h2 style={{ color: "violet" }}>I prffer having a clear</h2>
-          </div>
+        <div
+          className="pageContainer"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <Smilys route={"questions_twelve"} />
+          <br />
+          <h2 style={{ color: "purple" }}>I preffer having a clear</h2>
         </div>
       </div>
     </>
   );
 }
+
+// I preffer having a clear
+// questions_twelve
 
 export default page;

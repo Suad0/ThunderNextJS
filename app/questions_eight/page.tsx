@@ -13,28 +13,34 @@ function page() {
           height: "100vh",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          position: "relative",
+          textAlign: "center",
         }}
       >
-        <div className="pageContainer">
-          <div className="preHeaderWrapper">
-            <PreHeader />
-          </div>
+        <div className="preHeaderWrapper">
+          <PreHeader />
+        </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Smilys route={"questions_nine"} />
-            <br></br>
-            <h2 style={{ color: "violet" }}>Discussing future possibilities</h2>
-          </div>
+        <div
+          className="pageContainer"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          <Smilys route={"questions_nine"} />
+          <br />
+          <h2 style={{ color: "purple" }}>Discussing future possibilities</h2>
         </div>
       </div>
     </>
   );
 }
+
+// questions_nine
+
+// Discussing future possibilities
 
 export default page;
