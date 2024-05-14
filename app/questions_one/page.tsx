@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 
 function Page() {
   const hexagons = [
-    { text: "Work enthusiast" }, 
-    { text: "Party person" }, 
-    { text: "No obligation" }, 
-    { text: "Focused on studies" }, 
+    { text: "Work enthusiast" },
+    { text: "Party person" },
+    { text: "No obligation" },
+    { text: "Focused on studies" },
   ];
 
   return (

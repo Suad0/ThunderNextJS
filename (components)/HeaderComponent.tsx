@@ -2,6 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 function HeaderComponent() {
   return (
@@ -9,7 +11,13 @@ function HeaderComponent() {
       <nav className="navbar">
         <div className="brand">
           <Link legacyBehavior href="/">
-            <a className="logo">Logo</a>
+            <Image
+              src="/assets/images/friends_in_flats_logo.jpeg"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
           </Link>
         </div>
         <ul className="nav-links">

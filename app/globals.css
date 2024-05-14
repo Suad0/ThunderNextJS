@@ -37,7 +37,7 @@
   right: 0;
   bottom: 0;
 }
-
+/*
 .hex-inner {
   position: absolute;
   bottom: 0;
@@ -50,6 +50,29 @@
   border-bottom-right-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+*/
+
+
+
+
+
+.hex-inner {
+  position: relative;
+  width: 100%; /* Set width of hex-inner to 100% */
+  padding-top: 115%; /* Maintain the aspect ratio of the hexagon */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.hex-image {
+  max-width: 60px; /* Limit the maximum width of the image */
+  max-height: 60px; /* Limit the maximum height of the image */
+  position: relative;
+  top: 50%; /* Adjust the percentage as needed */
+  transform: translate(-5%, -5%); /* Center the image horizontally */
+}
+
+
 
 .pos0 {
   /* Keine absolute Positionierung erforderlich */
@@ -242,4 +265,11 @@
 .login-btn:hover {
   background-color: #ddd;
 }
+
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 
