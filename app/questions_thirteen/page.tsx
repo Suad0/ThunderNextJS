@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
 import { motion } from "framer-motion";
+import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
+import { Button } from "primereact/button";
+import { Toast } from "primereact/toast";
 
 import PreHeader from "@/(components)/PreHeader";
 
@@ -11,6 +14,27 @@ function Page() {
   const [selectedDistrict, setSelectedDistrict] = useState<any>(null);
   const [selectedBudget, setSelectedBudget] = useState<any>(null);
   const [selectedCountry, setSelectedCountry] = useState<any>(null);
+
+  const [visible, setVisible] = useState<boolean>(false);
+  const toast = useRef(null);
+
+  const accept = () => {
+    toast?.current?.show({
+      severity: "info",
+      summary: "Confirmed",
+      detail: "Done",
+      life: 3000,
+    });
+  };
+
+  const confirm1 = () => {
+    confirmDialog({
+      message: "Submited, everything done",
+      header: "Confirmation",
+      icon: "pi pi-check",
+      accept,
+    });
+  };
 
   const [val1, setVal1] = useState();
   const [val2, setVal2] = useState();
@@ -83,7 +107,7 @@ function Page() {
           backgroundSize: "cover",
         }}
       >
-        <div className="preHeaderWrapper">
+        <div className="preHeaderWrapper preHeaderContainer">
           <PreHeader />
         </div>
         <div className="flex justify-center items-center h-screen">
@@ -186,12 +210,12 @@ function Page() {
               </div>
               <div className="mb-4">
                 <div className="button-normal">
-                  <button
-                    className="p-button p-button-default"
-                    aria-label="Submit"
-                  >
-                    Submit
-                  </button>
+                <Toast ref={toast} />
+                <ConfirmDialog />
+                  
+                  <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Everything checked"
+                    header="Confirmation" icon="pi pi-check" accept={accept}  />
+                <Button onClick={() => setVisible(true)} icon="pi pi-check" label="Confirm" />
                 </div>
               </div>
             </motion.div>

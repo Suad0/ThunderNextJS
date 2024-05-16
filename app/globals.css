@@ -53,10 +53,6 @@
 
 */
 
-
-
-
-
 .hex-inner {
   position: relative;
   width: 100%; /* Set width of hex-inner to 100% */
@@ -71,8 +67,6 @@
   top: 50%; /* Adjust the percentage as needed */
   transform: translate(-5%, -5%); /* Center the image horizontally */
 }
-
-
 
 .pos0 {
   /* Keine absolute Positionierung erforderlich */
@@ -197,7 +191,6 @@
   background-color: #0056b3; /* Darker blue color on hover */
 }
 
-
 .hex-image {
   max-width: 100%; /* Limit the maximum width of the image */
   max-height: 100%; /* Limit the maximum height of the image */
@@ -208,11 +201,6 @@
   right: 0;
   margin: auto; /* Center the image horizontally and vertically */
 }
-
-
-
-
-
 
 /* Header styles */
 
@@ -272,4 +260,14 @@
   padding: 20px;
 }
 
+.preHeaderContainer {
+  width: 500px; /* Set initial width */
+  height: 500px; /* Set initial height */
+}
 
+@media screen and (max-width: 768px) {
+  .preHeaderContainer {
+    width: 100%; /* Make it responsive to smaller screens */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+}
