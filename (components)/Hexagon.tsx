@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import HexagonSVG from "./HexagonSVG";
 
 interface HexagonProps {
@@ -11,9 +12,9 @@ interface HexagonProps {
 
 function Hexagon({ hexagons, route }: HexagonProps) {
   const router = useRouter();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleClick = (route: string) => {
-    console.log(route);
     router.push(route);
   };
 
@@ -24,18 +25,29 @@ function Hexagon({ hexagons, route }: HexagonProps) {
           className={`pos${index}`}
           key={index}
           onClick={() => handleClick(route)}
+          onMouseEnter={() => {
+            setHoveredIndex(index);
+            document.querySelector(`.pos${index}`).style.transform =
+              "scale(1.2)";
+          }}
+          onMouseLeave={() => {
+            setHoveredIndex(null);
+            document.querySelector(`.pos${index}`).style.transform = "scale(1)";
+          }}
           style={{
             cursor: "pointer",
             transition: "transform 0.3s",
             display: "inline-block",
             marginRight: "10px",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.2)")}
-          onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
         >
           <div className="hex-inner">
             <HexagonSVG src={hex.src} />
-            <span>{hex.text}</span>
+            {hoveredIndex === index && (
+              <div className="tooltip">
+                <span className="tooltiptext">{hex.text}</span>
+              </div>
+            )}
           </div>
         </div>
       ))}

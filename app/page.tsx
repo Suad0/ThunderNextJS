@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import PreHeader from "@/(components)/PreHeader";
 import HeaderComponent from "@/(components)/HeaderComponent";
+import LandingPage from "@/(components)/LandingPage";
 
 export default function Home() {
   const router = useRouter();
@@ -15,6 +16,13 @@ export default function Home() {
   };
 
   return (
+    <div>
+      <HeaderComponent />
+
+      <LandingPage />
+    </div>
+
+    /*
     <>
       <div
         style={{
@@ -78,5 +86,6 @@ export default function Home() {
         </div>
       </div>
     </>
+    */
   );
 }

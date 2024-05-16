@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.1.9",
+    "@tabler/icons-react": "^3.4.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.2",
     "mongoose": "^8.3.4",
     "next": "14.2.3",
     "primeicons": "^7.0.0",
     "primereact": "^10.6.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
