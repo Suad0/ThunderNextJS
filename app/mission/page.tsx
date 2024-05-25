@@ -1,9 +1,14 @@
-import React from 'react'
+import { GlobeComponent } from "@/(components)/GlobeComponent";
+import HeaderComponent from "@/(components)/HeaderComponent";
+import React from "react";
 
 function page() {
   return (
-    <div>page</div>
-  )
+    <div>
+      <HeaderComponent />
+      <GlobeComponent />
+    </div>
+  );
 }
 
-export default page
+export default page;

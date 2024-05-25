@@ -1,14 +1,24 @@
-import React from 'react'
+import HeaderComponent from "@/(components)/HeaderComponent";
+import { TextGenerateEffectComponent } from "@/(components)/TextGenerateEffectComponent";
+import React from "react";
 
 function page() {
   return (
     <div>
-      <div className="page-container">
-      <h1>About Us</h1>
-    
+      <div
+        style={{
+          backgroundImage: `url("/assets/images/background.svg")`,
+          width: "100vw",
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <HeaderComponent />
+        <TextGenerateEffectComponent />
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default page
+export default page;

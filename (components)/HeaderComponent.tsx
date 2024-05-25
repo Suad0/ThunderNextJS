@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
 function HeaderComponent() {
   return (
     <header className="header">
@@ -21,6 +20,11 @@ function HeaderComponent() {
           </Link>
         </div>
         <ul className="nav-links">
+          <li>
+            <Link legacyBehavior href="/">
+              <a>Home</a>
+            </Link>
+          </li>
           <li>
             <Link legacyBehavior href="/about">
               <a>About</a>
