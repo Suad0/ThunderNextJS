@@ -32,14 +32,7 @@ function page() {
           </div>
 
           <div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-            >
-              <Hexagon hexagons={hexagons} route={"/questions_five"} />
-            </motion.div>
+            <Hexagon hexagons={hexagons} route={"/questions_five"} />
           </div>
         </div>
       </div>

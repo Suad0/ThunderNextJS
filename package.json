@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tabler/icons-react": "^3.4.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@tabler/icons-react": "^3.5.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.2",
+    "framer-motion": "^11.2.6",
     "mongoose": "^8.3.4",
     "next": "14.2.3",
     "primeicons": "^7.0.0",

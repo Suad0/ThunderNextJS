@@ -3,7 +3,6 @@
 import React from "react";
 import Hexagon from "@/(components)/Hexagon";
 import PreHeader from "@/(components)/PreHeader";
-import { motion } from "framer-motion";
 
 function Page() {
   const hexagons = [
@@ -29,14 +28,7 @@ function Page() {
         </div>
 
         <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <Hexagon hexagons={hexagons} route={"/questions_two"} />
-          </motion.div>
+          <Hexagon hexagons={hexagons} route={"/questions_two"} />
         </div>
       </div>
     </div>

@@ -7,10 +7,13 @@ import { motion } from "framer-motion";
 import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
+import { useRouter } from "next/navigation";
 
 import PreHeader from "@/(components)/PreHeader";
 
 function Page() {
+  const router = useRouter();
+
   const [selectedDistrict, setSelectedDistrict] = useState<any>(null);
   const [selectedBudget, setSelectedBudget] = useState<any>(null);
   const [selectedCountry, setSelectedCountry] = useState<any>(null);
@@ -112,11 +115,14 @@ function Page() {
         </div>
         <div className="flex justify-center items-center h-screen">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-            className="card-container"
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-4 items-center justify-center px-4"
           >
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -210,12 +216,27 @@ function Page() {
               </div>
               <div className="mb-4">
                 <div className="button-normal">
-                <Toast ref={toast} />
-                <ConfirmDialog />
-                  
-                  <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Everything checked"
-                    header="Confirmation" icon="pi pi-check" accept={accept}  />
-                <Button onClick={() => setVisible(true)} icon="pi pi-check" label="Confirm" />
+                  <Toast ref={toast} />
+                  <ConfirmDialog />
+
+                  <ConfirmDialog
+                    visible={visible}
+                    onHide={() => setVisible(false)}
+                    message="Everything checked"
+                    header="Confirmation"
+                    icon="pi pi-check"
+                    accept={accept}
+                  />
+                  <Button
+                    onClick={() => {
+                      setVisible(true);
+                      setTimeout(() => {
+                        router.push("/");
+                      }, 1500);
+                    }}
+                    icon="pi pi-check"
+                    label="Confirm"
+                  />
                 </div>
               </div>
             </motion.div>
